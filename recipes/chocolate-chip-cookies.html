@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Chip Cookies - Recipe Collection</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .recipe-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .recipe-meta {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .meta-label {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .meta-value {
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .ingredients, .instructions {
+            margin: 2rem 0;
+        }
+        .ingredients ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .ingredients li {
+            background: #f8f9fa;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-left: 3px solid #007bff;
+            padding-left: 1rem;
+        }
+        .instructions ol {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+        .instructions li {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 3rem;
+        }
+        .instructions li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            background: #007bff;
+            color: white;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .back-link {
+            margin-bottom: 2rem;
+        }
+        .back-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        .anylist-notice {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+    </style>
+    
+    <!-- Schema.org Recipe JSON-LD markup for AnyList compatibility -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Recipe",
+        "name": "Classic Chocolate Chip Cookies",
+        "description": "Soft and chewy chocolate chip cookies that are perfect for any occasion. These cookies have crispy edges and a tender center.",
+        "image": "https://example.com/chocolate-chip-cookies.jpg",
+        "author": {
+            "@type": "Person",
+            "name": "Recipe Collection"
+        },
+        "prepTime": "PT15M",
+        "cookTime": "PT12M",
+        "totalTime": "PT27M",
+        "recipeYield": "24 cookies",
+        "recipeCategory": "Dessert",
+        "recipeCuisine": "American",
+        "keywords": "cookies, chocolate chip, dessert, baking",
+        "recipeIngredient": [
+            "2 1/4 cups all-purpose flour",
+            "1 teaspoon baking soda",
+            "1 teaspoon salt",
+            "1 cup butter, softened",
+            "3/4 cup granulated sugar",
+            "3/4 cup packed brown sugar",
+            "2 large eggs",
+            "2 teaspoons vanilla extract",
+            "2 cups chocolate chips"
+        ],
+        "recipeInstructions": [
+            {
+                "@type": "HowToStep",
+                "text": "Preheat oven to 375°F (190°C). Line baking sheets with parchment paper."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "In a medium bowl, whisk together flour, baking soda, and salt. Set aside."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "In a large bowl, cream together softened butter, granulated sugar, and brown sugar until light and fluffy, about 3-4 minutes."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "Beat in eggs one at a time, then add vanilla extract."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "Gradually mix in the flour mixture until just combined. Do not overmix."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "Fold in chocolate chips until evenly distributed."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "Drop rounded tablespoons of dough onto prepared baking sheets, spacing them 2 inches apart."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "Bake for 9-12 minutes, or until edges are lightly golden but centers still look slightly underbaked."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "Let cool on baking sheet for 5 minutes before transferring to a wire rack."
+            }
+        ],
+        "nutrition": {
+            "@type": "NutritionInformation",
+            "servingSize": "1 cookie",
+            "calories": "185"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="recipe-container">
+        <div class="back-link">
+            <a href="../index.html">← Back to Recipe Collection</a>
+        </div>
+
+        <div class="anylist-notice">
+            <strong>📱 AnyList Import:</strong> This recipe includes proper Schema.org markup. Copy this page's URL and paste it into AnyList to import automatically.
+        </div>
+
+        <h1>Classic Chocolate Chip Cookies</h1>
+        
+        <p>Soft and chewy chocolate chip cookies that are perfect for any occasion. These cookies have crispy edges and a tender center.</p>
+
+        <div class="recipe-meta">
+            <div class="meta-item">
+                <span class="meta-label">Prep Time</span>
+                <span class="meta-value">15 minutes</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Cook Time</span>
+                <span class="meta-value">12 minutes</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Total Time</span>
+                <span class="meta-value">27 minutes</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Yield</span>
+                <span class="meta-value">24 cookies</span>
+            </div>
+        </div>
+
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                <li>2 1/4 cups all-purpose flour</li>
+                <li>1 teaspoon baking soda</li>
+                <li>1 teaspoon salt</li>
+                <li>1 cup butter, softened</li>
+                <li>3/4 cup granulated sugar</li>
+                <li>3/4 cup packed brown sugar</li>
+                <li>2 large eggs</li>
+                <li>2 teaspoons vanilla extract</li>
+                <li>2 cups chocolate chips</li>
+            </ul>
+        </div>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Preheat oven to 375°F (190°C). Line baking sheets with parchment paper.</li>
+                <li>In a medium bowl, whisk together flour, baking soda, and salt. Set aside.</li>
+                <li>In a large bowl, cream together softened butter, granulated sugar, and brown sugar until light and fluffy, about 3-4 minutes.</li>
+                <li>Beat in eggs one at a time, then add vanilla extract.</li>
+                <li>Gradually mix in the flour mixture until just combined. Do not overmix.</li>
+                <li>Fold in chocolate chips until evenly distributed.</li>
+                <li>Drop rounded tablespoons of dough onto prepared baking sheets, spacing them 2 inches apart.</li>
+                <li>Bake for 9-12 minutes, or until edges are lightly golden but centers still look slightly underbaked.</li>
+                <li>Let cool on baking sheet for 5 minutes before transferring to a wire rack.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

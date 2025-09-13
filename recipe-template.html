@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Recipe Name] - Recipe Collection</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .recipe-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .recipe-meta {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .meta-label {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .meta-value {
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .ingredients, .instructions {
+            margin: 2rem 0;
+        }
+        .ingredients ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .ingredients li {
+            background: #f8f9fa;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-left: 3px solid #007bff;
+            padding-left: 1rem;
+        }
+        .instructions ol {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+        .instructions li {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 3rem;
+        }
+        .instructions li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            background: #007bff;
+            color: white;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .back-link {
+            margin-bottom: 2rem;
+        }
+        .back-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        .anylist-notice {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+    </style>
+    
+    <!-- Schema.org Recipe JSON-LD markup for AnyList compatibility -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Recipe",
+        "name": "[Recipe Name]",
+        "description": "[Brief description of the recipe]",
+        "image": "[Optional: URL to recipe image]",
+        "author": {
+            "@type": "Person",
+            "name": "Recipe Collection"
+        },
+        "prepTime": "PT[X]M",
+        "cookTime": "PT[X]M",
+        "totalTime": "PT[X]M",
+        "recipeYield": "[X servings/pieces]",
+        "recipeCategory": "[e.g., Dessert, Main Course, Appetizer]",
+        "recipeCuisine": "[e.g., American, Italian, Asian]",
+        "keywords": "[comma, separated, keywords]",
+        "recipeIngredient": [
+            "[Ingredient 1 with amount]",
+            "[Ingredient 2 with amount]",
+            "[Add more ingredients as needed]"
+        ],
+        "recipeInstructions": [
+            {
+                "@type": "HowToStep",
+                "text": "[Step 1 instructions]"
+            },
+            {
+                "@type": "HowToStep",
+                "text": "[Step 2 instructions]"
+            }
+        ],
+        "nutrition": {
+            "@type": "NutritionInformation",
+            "servingSize": "[1 serving]",
+            "calories": "[Optional: calories per serving]"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="recipe-container">
+        <div class="back-link">
+            <a href="../index.html">← Back to Recipe Collection</a>
+        </div>
+
+        <div class="anylist-notice">
+            <strong>📱 AnyList Import:</strong> This recipe includes proper Schema.org markup. Copy this page's URL and paste it into AnyList to import automatically.
+        </div>
+
+        <h1>[Recipe Name]</h1>
+        
+        <p>[Brief description of the recipe]</p>
+
+        <div class="recipe-meta">
+            <div class="meta-item">
+                <span class="meta-label">Prep Time</span>
+                <span class="meta-value">[X minutes]</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Cook Time</span>
+                <span class="meta-value">[X minutes]</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Total Time</span>
+                <span class="meta-value">[X minutes]</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Yield</span>
+                <span class="meta-value">[X servings]</span>
+            </div>
+        </div>
+
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                <li>[Ingredient 1 with amount]</li>
+                <li>[Ingredient 2 with amount]</li>
+                <!-- Add more ingredients as needed -->
+            </ul>
+        </div>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li>[Step 1 instructions]</li>
+                <li>[Step 2 instructions]</li>
+                <!-- Add more steps as needed -->
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
