@@ -1,0 +1,33 @@
+# Site settings
+title: Recipe Collection
+description: A public collection of recipes with Schema.org JSON-LD for AnyList import
+baseurl: ""
+url: "https://traviscaro.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Collections for recipes
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:name/
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - vendor/
+  - .gitignore
+
+# Include hidden files
+include:
+  - .htaccess
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "recipes"
+    values:
+      layout: "recipe"

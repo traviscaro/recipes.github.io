@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Collection</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .recipe-list {
+            margin-top: 2rem;
+        }
+        .recipe-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border-left: 4px solid #007bff;
+        }
+        .recipe-item a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .recipe-item a:hover {
+            text-decoration: underline;
+        }
+        .upload-instructions {
+            background: #e9ecef;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+        .anylist-info {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        code {
+            background: #f1f3f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Collection</h1>
+        <p>A public collection of recipes with Schema.org JSON-LD markup for easy import into AnyList and other recipe managers.</p>
+        
+        <div class="anylist-info">
+            <strong>📱 AnyList Import:</strong> All recipes on this site include proper Schema.org Recipe JSON-LD markup, making them compatible with AnyList's web import feature. Simply copy the recipe URL and paste it into AnyList to import.
+        </div>
+
+        <div class="upload-instructions">
+            <h3>How to Add New Recipes</h3>
+            <p>To add a new recipe to this collection:</p>
+            <ol>
+                <li>Create an HTML file with proper Schema.org Recipe JSON-LD markup</li>
+                <li>Save the file in the <code>recipes/</code> directory</li>
+                <li>Commit and push to the repository</li>
+                <li>The recipe will be automatically available at <code>https://traviscaro.github.io/recipes/[filename].html</code></li>
+            </ol>
+            <p><strong>Note:</strong> Ensure your HTML files include proper Recipe JSON-LD structured data for AnyList compatibility.</p>
+        </div>
+
+        <div class="recipe-list">
+            <h2>Available Recipes</h2>
+            <div id="recipe-container">
+                <p>Loading recipes...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dynamically load and display recipe files
+        async function loadRecipes() {
+            const container = document.getElementById('recipe-container');
+            
+            try {
+                // For now, we'll start with a placeholder
+                // In a real implementation, you could use GitHub API to list files
+                const recipes = [
+                    // This will be populated as recipes are added
+                ];
+
+                if (recipes.length === 0) {
+                    container.innerHTML = `
+                        <div class="recipe-item">
+                            <p>No recipes uploaded yet. Add your first recipe HTML file to the <code>recipes/</code> directory!</p>
+                            <p>Example: Save your recipe as <code>recipes/chocolate-chip-cookies.html</code> and it will be accessible at:</p>
+                            <p><code>https://traviscaro.github.io/recipes/chocolate-chip-cookies.html</code></p>
+                        </div>
+                    `;
+                } else {
+                    container.innerHTML = recipes.map(recipe => `
+                        <div class="recipe-item">
+                            <a href="recipes/${recipe.filename}" target="_blank">${recipe.title}</a>
+                            <p>${recipe.description || 'No description available'}</p>
+                        </div>
+                    `).join('');
+                }
+            } catch (error) {
+                container.innerHTML = '<p>Error loading recipes. Please try refreshing the page.</p>';
+            }
+        }
+
+        // Load recipes when page loads
+        document.addEventListener('DOMContentLoaded', loadRecipes);
+    </script>
+</body>
+</html>
