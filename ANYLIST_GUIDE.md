@@ -9,10 +9,10 @@ AnyList can automatically import recipes from websites that include proper Schem
 ## Step-by-Step Import Process
 
 ### 1. Find the Recipe URL
-- Navigate to https://traviscaro.github.io/recipes.github.io/
+- Navigate to https://traviscaro.github.io/recipe-importer/
 - Click on the recipe you want to import
 - Copy the full URL from your browser's address bar
-- Example: `https://traviscaro.github.io/recipes.github.io/recipes/chocolate-chip-cookies.html`
+- Example: `https://traviscaro.github.io/recipe-importer/recipes/chocolate-chip-cookies.html`
 
 ### 2. Import in AnyList
 1. Open the AnyList app on your device

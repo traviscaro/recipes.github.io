@@ -1,4 +1,4 @@
-# recipes.github.io
+# recipe-importer
 
 A place to publicly host recipe pages that I take pictures of, translate to Schema.org Recipe JSON-LD, and import with AnyList.
 
@@ -6,7 +6,7 @@ A place to publicly host recipe pages that I take pictures of, translate to Sche
 
 This GitHub Pages site provides a simple way to host raw HTML recipe files that are compatible with AnyList import. All recipes include proper Schema.org Recipe JSON-LD markup for seamless integration with recipe management apps.
 
-**Live Site:** https://traviscaro.github.io/recipes.github.io/
+**Live Site:** https://traviscaro.github.io/recipe-importer/
 
 ## Features
 
@@ -21,7 +21,7 @@ This GitHub Pages site provides a simple way to host raw HTML recipe files that 
 1. **Create an HTML file** with your recipe content and proper Schema.org markup
 2. **Save the file** in the `recipes/` directory (e.g., `recipes/my-recipe.html`)
 3. **Commit and push** the file to the repository
-4. **Access your recipe** at `https://traviscaro.github.io/recipes.github.io/recipes/my-recipe.html`
+4. **Access your recipe** at `https://traviscaro.github.io/recipe-importer/recipes/my-recipe.html`
 
 ## Recipe HTML Template
 
@@ -62,7 +62,7 @@ Make sure your JSON-LD includes these fields:
 
 ## AnyList Import Instructions
 
-1. Copy the full URL of any recipe (e.g., `https://traviscaro.github.io/recipes.github.io/recipes/chocolate-chip-cookies.html`)
+1. Copy the full URL of any recipe (e.g., `https://traviscaro.github.io/recipe-importer/recipes/chocolate-chip-cookies.html`)
 2. Open AnyList and go to the Recipes section
 3. Tap the "+" button and select "Import from Web"
 4. Paste the URL and tap "Import"

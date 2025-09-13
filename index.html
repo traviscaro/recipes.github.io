@@ -81,7 +81,7 @@
                 <li>Create an HTML file with proper Schema.org Recipe JSON-LD markup</li>
                 <li>Save the file in the <code>recipes/</code> directory</li>
                 <li>Commit and push to the repository</li>
-                <li>The recipe will be automatically available at <code>https://traviscaro.github.io/recipes/[filename].html</code></li>
+                <li>The recipe will be automatically available at <code>https://traviscaro.github.io/recipe-importer/recipes/[filename].html</code></li>
             </ol>
             <p><strong>Note:</strong> Ensure your HTML files include proper Recipe JSON-LD structured data for AnyList compatibility.</p>
         </div>
@@ -117,7 +117,7 @@
                         <div class="recipe-item">
                             <p>No recipes uploaded yet. Add your first recipe HTML file to the <code>recipes/</code> directory!</p>
                             <p>Example: Save your recipe as <code>recipes/chocolate-chip-cookies.html</code> and it will be accessible at:</p>
-                            <p><code>https://traviscaro.github.io/recipes/chocolate-chip-cookies.html</code></p>
+                            <p><code>https://traviscaro.github.io/recipe-importer/recipes/chocolate-chip-cookies.html</code></p>
                         </div>
                     `;
                 } else {
@@ -126,7 +126,7 @@
                             <a href="recipes/${recipe.filename}" target="_blank">${recipe.title}</a>
                             <p>${recipe.description || 'No description available'}</p>
                             <small style="color: #666;">
-                                📋 URL for AnyList: <code>https://traviscaro.github.io/recipes.github.io/recipes/${recipe.filename}</code>
+                                📋 URL for AnyList: <code>https://traviscaro.github.io/recipe-importer/recipes/${recipe.filename}</code>
                             </small>
                         </div>
                     `).join('');
