@@ -70,6 +70,8 @@
         
         <div class="anylist-info">
             <strong>📱 AnyList Import:</strong> All recipes on this site include proper Schema.org Recipe JSON-LD markup, making them compatible with AnyList's web import feature. Simply copy the recipe URL and paste it into AnyList to import.
+            <br><br>
+            <a href="ANYLIST_GUIDE.md" style="color: #155724; font-weight: bold;">📖 Read the complete AnyList import guide →</a>
         </div>
 
         <div class="upload-instructions">
@@ -98,10 +100,16 @@
             const container = document.getElementById('recipe-container');
             
             try {
-                // For now, we'll start with a placeholder
-                // In a real implementation, you could use GitHub API to list files
+                // List of available recipes
+                // This is a simple static list - in a more advanced setup, 
+                // you could use GitHub API to automatically discover recipes
                 const recipes = [
-                    // This will be populated as recipes are added
+                    {
+                        filename: 'chocolate-chip-cookies.html',
+                        title: 'Classic Chocolate Chip Cookies',
+                        description: 'Soft and chewy chocolate chip cookies with crispy edges and tender centers.'
+                    }
+                    // Add more recipes here as you create them
                 ];
 
                 if (recipes.length === 0) {
@@ -117,6 +125,9 @@
                         <div class="recipe-item">
                             <a href="recipes/${recipe.filename}" target="_blank">${recipe.title}</a>
                             <p>${recipe.description || 'No description available'}</p>
+                            <small style="color: #666;">
+                                📋 URL for AnyList: <code>https://traviscaro.github.io/recipes.github.io/recipes/${recipe.filename}</code>
+                            </small>
                         </div>
                     `).join('');
                 }
